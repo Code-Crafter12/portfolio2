@@ -1,0 +1,69 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">Blog Details</h1>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+
+        <div class="container">
+            <div class="" data-aos="fade-up" data-aos-delay="200">
+
+                <h3>Getting started with React</h3>
+                <p>React is a JavaScript library created by Facebook and a tool for building UI components. React finds
+                    out
+                    what
+                    changes have been made, and changes only what needs to be changed.</p>
+                <h4>Getting started</h4>
+                <p>If you have <b>npx and Node.js</b> installed, you can create a React application by using
+                    create-react-app.
+                    Run this command to create a React application <b>npx create-react-app my-react-app</b> move to your
+                    app
+                    directory by typing the command <b>cd my-react-app</b> and run your application by typing <b>npm
+                        start</b>
+                    Open a new browser and type <b>localhost:3000</b> in the address bar. The result will be as follow:
+                </p><br>
+                <img src="{% static 'assets/img/12.PNG' %}" alt="" width="500px">
+                <br>
+                <h4>Modification of React App</h4>
+                <p>Look in the my-react-app directory, and you will find a src folder. Inside it, there is a file
+                    called App.js, open it and it will look like this:</p><br>
+                <img src="{% static 'assets/img/13.PNG' %}" alt="" width="500px">
+                <br>
+                <h4>React JSX</h4>
+                <p>JSX (JavaScript XML) is a syntax extension for JavaScript used in React that allows developers to
+                    write
+                    HTML-like code within their components. It enhances readability by combining markup and logic and
+                    make it
+                    easier to create dynamic user interfaces. JSX simplifies the development process</p>
+                <h4>Components</h4>
+                <ul>
+                    <li><i class="bi bi-check-circle"></i> <span>Class Components - A class component must include the
+                            extends
+                            React.Component statement. This statement creates an inheritance to React.Component, and
+                            gives your
+                            component access to React.Component's functions.</span></li><br>
+                    <img src="{% static 'assets/img/14.PNG' %}" alt="" width="500px">
+                    <br>
+                    <li><i class="bi bi-check-circle"></i> <span>Functional Components - A Function components can be
+                            written
+                            using much
+                            less code, are easier to understand</span></li>
+                    <img src="{% static 'assets/img/15.PNG' %}" alt="" width="500px"><br>
+                </ul>
+            </div>
+        </div>
+
+    </section><!-- /Service Details Section -->
+
+</main>
+{% endblock content %}

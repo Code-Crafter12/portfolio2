@@ -1,0 +1,120 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">Blog Details</h1>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+        <div class="container">
+            <div class="" data-aos="fade-up" data-aos-delay="200">
+                <!-- <img src="assets/img/services.jpg" alt="" class="img-fluid services-img"> -->
+                <h3>Getting started with Django</h3>
+                <h4>What is Django?</h4>
+                <p>Django is a Python framework that makes it easier to create web sites using Python and emphasize the
+                    reusability of components. Django follows the MVT design pattern (Model View Template).</p>
+                <ul>
+                    <li><i class="bi bi-check-circle"></i> <span>Model - The data you want to present, usually data from
+                            a
+                            database. The models are usually located in a file called <bold>models.py.</bold></span>
+                    </li>
+                    <li><i class="bi bi-check-circle"></i> <span>View - A request handler that returns the relevant
+                            template
+                            and content - based on the request from the user. The views are usually located in a file
+                            called
+                            <bold>views.py.</bold>
+                        </span></li>
+                    <li><i class="bi bi-check-circle"></i> <span>Template - A text file (like an HTML file) containing
+                            the
+                            layout of the web page, with logic on how to display the data. The templates of an
+                            application is
+                            located in a folder named <bold>templates.</bold></span></li>
+                </ul>
+                <h4>Django Requires Python</h4>
+                <p> To check if your system has Python installed, run this command in the command prompt: <b>python
+                        --version</b>
+                    It is suggested to have a dedicated virtual environment for each Django project, and one way to
+                    manage a
+                    virtual environment is venv, which is included in Python.Type the following in the command prompt,
+                    remember to navigate to where you want to create your project: <b>py -m venv myWorld </b>This will
+                    set up
+                    a virtual environment, and create a folder named "myworld" with subfolders and files,
+                    like this:</p><br>
+                <img src="{5 static 'assets/img/3.PNG' %}" alt="" width="500px">
+                <br>
+                <p>Then you have to activate the environment, by typing this command:
+                    <b>myWorld\Scripts\activate.bat</b>
+                    Now, that we have created a virtual environment, we are ready to install Django. <b>pip install
+                        django</b>
+                </p><br>
+                <img src="{% static 'assets/img/5.PNG' %}" alt="" width="500px">
+                <br>
+                <h4>First project in Django</h4>
+                <p>Once you have come up with a suitable name for your Django project, like mine: my_tennis_club,
+                    navigate
+                    to where in the file system you want to store the code, and run this command in the command prompt:
+                    <b>django-admin startproject my_tennis_club</b>
+                </p><br>
+                <img src="{% static 'assets/img/7.PNG' %}" alt="" width="500px">
+                <br>
+                <h4>Run the project</h4>
+                <p>Navigate to the /my_tennis_club folder and execute this command in the command prompt: <b>python
+                        manage.py
+                        runserver</b> which will produce the following result</p><br>
+                <img src="{% static 'assets/img/8.PNG' %}" alt="" width="500px">
+                <br>
+                <p>Open a new browser and type <b>localhost:8000</b> in the address bar</p><br>
+                <img src="{% static 'assets/img/9.PNG' %}" alt="" width="500px">
+                <br>
+                <h4>Create App</h4>
+                <p>An app is a web application that has a specific meaning in your project, like a home page, a contact
+                    form, or a members database.
+                    Start by navigating to the project (my_tennis_club) folder, and run the command <b>python manage.py
+                        startapp members</b>Django creates a folder named members in my project, with this content:</p>
+                <br><br>
+                <img src="{% static 'assets/img/10.PNG' %}" alt="" width="500px">
+                <br>
+                <h4>Django Views</h4>
+                <p>Django views are Python functions that take http requests and return http response, like HTML
+                    documents.
+                    Views are usually put in a file called views.py located on your app's folder. Find it and open it,
+                    and
+                    replace the content as follow:</p><br>
+                <img src="{% static 'assets/img/2.PNG' %}" alt="" width="500px">
+                <br>
+                <p>This is a simple example on how to send a response back to the browser.</p>
+                <h4>Django URLs</h4>
+                <p>Create a file named <b>urls.py</b> in the same folder as the views.py file, and type this code in it:
+                </p>
+                <br>
+                <img src="{% static 'assets/img/11.PNG' %}" alt="" width="500px"><br>
+                <br>
+                <h4>Django Templates</h4>
+                <p>Django templates allow developers to create dynamic HTML pages using a simple, readable syntax that
+                    incorporates template tags and filters. This approach enhances code maintainability and promotes the
+                    reuse
+                    of common components across different parts of the application.</p>
+                <h4>Django models</h4>
+                <p>Django models serve as the foundation for database interaction in Django applications. By using
+                    Python
+                    classes, developers can easily create,
+                    retrieve, update, and delete records in the database, while Django’s built-in ORM (Object-Relational
+                    Mapping) handles the underlying SQL queries. To migrate the changes in database type the command
+                    <b>pyrhon
+                        manage.py makemigrations</b> and to confirm migration type: <b>python manage.py migrate</b></p>
+
+            </div>
+        </div>
+
+
+    </section><!-- /Service Details Section -->
+
+</main>
+{% endblock content %}

@@ -1,0 +1,69 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content%}
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">Blog Details</h1>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+
+        <div class="container">
+            <div class="" data-aos="fade-up" data-aos-delay="200">
+
+                <h3>Deployment with PythonAnywhere</h3>
+                <p>Deploying a Django project on PythonAnywhere is a lot like running a Django project on your own PC.
+                    You'll
+                    use a virtualenv, just like you probably do on your own PC, you'll have a copy of your code on
+                    PythonAnywhere
+                    which you can edit and browse and commit to version control..</p>
+                <h4>Steps involved</h4>
+                <ul>
+                    <li><i class="bi bi-check-circle"></i> <span> Upload your code to PythonAnywhere</span></li>
+                    <li><i class="bi bi-check-circle"></i> <span>Set up a virtualenv and install Django and any other
+                            requirements</span></li>
+                    <li><i class="bi bi-check-circle"></i> <span>Set up your web app using the manual config
+                            option</span></li>
+                    <li><i class="bi bi-check-circle"></i> <span>Add any other setup (static files, environment
+                            variables
+                            etc)</span></li>
+                </ul>
+                <h4>Upload code</h4>
+                <p>Share your code on version control system like <b>GitHub</b> and clone your project code from Bash
+                    Console
+                    by
+                    typing the following command: <br> <b>$ git clone git@github.com:myusername/myproject.git</b></p>
+                <br>
+                <br>
+                <h4>Create a virtualenv and install Django and any other requirements</h4>
+                <p>In your Bash console, create a virtualenv, naming it after your project, and choosing the version of
+                    Python
+                    you want to use:
+                    <br>
+                    $ mkvirtualenv --python=/usr/bin/python3.10 mysite-virtualenv <br>
+                    (mysite-virtualenv)$ pip install django <br>
+                    # or, if you have a requirements.txt:
+                    (mysite-virtualenv)$ pip install -r requirements.txt <br>
+                </p>
+                <h4>Setting up your Web app and WSGI file</h4>
+                <p>You need <br>
+                    The path to your Django project's top folder -- the folder that contains "manage.py", eg
+                    /home/myusername/mysite <br>
+                    The name of your project (that's the name of the folder that contains your settings.py), eg mysite
+                    <br>
+                    The name of your virtualenv, eg mysite-virtualenv <br>
+                </p>
+                <h4>Checking it worked.</h4>
+                <p>Go visit your site, it should be live</p>
+            </div>
+        </div>
+
+    </section>
+</main>
+{% endblock content %}
